@@ -88,6 +88,14 @@ const Header = () => {
             >
               Mapa Estratégico
             </Link>
+            <Link
+              to="/archivos-excel"
+              className={`font-medium transition-colors hover:text-green-600 ${
+                isScrolled ? 'text-green-700' : 'text-green-200'
+              }`}
+            >
+              Archivos Excel
+            </Link>
           </nav>
 
           <button
@@ -127,6 +135,13 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Mapa Estratégico
+            </Link>
+            <Link
+              to="/archivos-excel"
+              className="block w-full text-left px-4 py-2 text-green-700 hover:bg-green-50 hover:text-green-900 font-semibold"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Archivos Excel
             </Link>
           </div>
         )}

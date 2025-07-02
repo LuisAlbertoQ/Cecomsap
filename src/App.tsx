@@ -10,6 +10,7 @@ import Social from './components/Social';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import StrategicMap from './components/StrategicMap';
+import ExcelViewer from './components/ExcelViewer';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             }
           />
           <Route path="/mapa-estrategico" element={<StrategicMap />} />
+          <Route path="/archivos-excel" element={<ExcelViewer />} />
         </Routes>
     </div>
     </Router>
