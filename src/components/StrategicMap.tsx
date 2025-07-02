@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import mapaEstrategico from '../assets/MAPA ESTRATEGICO BALANCE SCORECARD.png';
 
 const cameOptions: Record<string, { category: string; description: string }> = {
   // EXPLORAR (Oportunidades)
@@ -290,6 +291,15 @@ const StrategicMap: React.FC = () => {
                 </div>
               ))}
             </div>
+          </div>
+          {/* Imagen del mapa estratégico */}
+          <div className="mt-12 flex flex-col items-center">
+            <h4 className="text-lg font-semibold text-gray-800 mb-4">Mapa Estratégico Visual</h4>
+            <img
+              src={mapaEstrategico}
+              alt="Mapa Estratégico Balance Scorecard"
+              className="rounded-xl shadow-lg max-w-full h-auto border-4 border-blue-200"
+            />
           </div>
         </div>
       </div>

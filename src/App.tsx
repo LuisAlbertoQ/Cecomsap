@@ -14,27 +14,27 @@ import StrategicMap from './components/StrategicMap';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
-        <Header />
+    <div className="min-h-screen bg-white">
+      <Header />
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <Hero />
-                <About />
-                <Services />
-                <Clients />
-                <Infrastructure />
-                <Social />
-                <Contact />
-                <Footer />
+      <Hero />
+      <About />
+      <Services />
+      <Clients />
+      <Infrastructure />
+      <Social />
+      <Contact />
+      <Footer />
               </>
             }
           />
           <Route path="/mapa-estrategico" element={<StrategicMap />} />
         </Routes>
-      </div>
+    </div>
     </Router>
   );
 }

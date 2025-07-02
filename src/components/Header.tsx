@@ -21,9 +21,9 @@ const Header = () => {
       navigate('/');
       // Esperar a que la página principal cargue antes de hacer scroll
       setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
         }
       }, 100);
       setIsMenuOpen(false);
