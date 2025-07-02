@@ -33,7 +33,7 @@ const excelFiles = [
 
 const ExcelViewer: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [tableData, setTableData] = useState<any[][]>([]);
+  const [tableData, setTableData] = useState<(string | number | boolean | null)[][]>([]);
   const [modalTitle, setModalTitle] = useState('');
   const [sheetNames, setSheetNames] = useState<string[]>([]);
   const [currentSheet, setCurrentSheet] = useState<string>('');
@@ -51,10 +51,10 @@ const ExcelViewer: React.FC = () => {
       setCurrentSheet(wb.SheetNames[0]);
       const worksheet = wb.Sheets[wb.SheetNames[0]];
       const data = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-      setTableData(data as any[][]);
+      setTableData(data as (string | number | boolean | null)[][]);
       setModalTitle(excel.name);
       setModalOpen(true);
-    } catch (error) {
+    } catch {
       alert('No se pudo cargar el archivo Excel.');
     }
   };
@@ -64,7 +64,7 @@ const ExcelViewer: React.FC = () => {
     setCurrentSheet(sheetName);
     const worksheet = workbook.Sheets[sheetName];
     const data = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-    setTableData(data as any[][]);
+    setTableData(data as (string | number | boolean | null)[][]);
   };
 
   const closeModal = () => {
@@ -92,7 +92,7 @@ const ExcelViewer: React.FC = () => {
 
   // Genera filas asegurando que todas tengan la misma cantidad de columnas
   const rows = tableData.slice(1).map((row) => {
-    const obj: Record<string, any> = {};
+    const obj: Record<string, string | number | boolean | null> = {};
     columns.forEach((col, j) => {
       obj[col.key] = row[j] !== undefined ? row[j] : '';
     });
@@ -108,7 +108,7 @@ const ExcelViewer: React.FC = () => {
         </div>
         <div className="p-6 md:p-12 bg-gray-50">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {excelFiles.map((excel, idx) => (
+            {excelFiles.map((excel) => (
               <div key={excel.file} className="flex flex-col items-center bg-white rounded-xl shadow-lg p-6 border-2 border-blue-200 hover:shadow-2xl transition-all">
                 <div className="text-6xl mb-4">📊</div>
                 <div className="font-bold text-lg text-blue-900 mb-2 text-center">{excel.name}</div>

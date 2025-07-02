@@ -96,6 +96,35 @@ const About = () => {
           </div>
         </div>
 
+        {/* Tarjetas de Misión y Visión */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+          {/* Misión */}
+          <div className="bg-white rounded-xl shadow-lg p-8 border-t-4 border-blue-600">
+            <h3 className="text-2xl font-bold text-blue-700 mb-4">Misión</h3>
+            <p className="text-gray-700 mb-4">
+              "Abastecer de combustibles y servicios complementarios de manera segura, eficiente y responsable a las unidades mineras y clientes de la región de Puno, promoviendo el desarrollo sostenible, la formalización del sector energético y el bienestar de nuestras cooperativas mineras asociadas y comunidades."
+            </p>
+            <ul className="list-disc pl-5 text-gray-600 space-y-2">
+              <li><span className="font-semibold">¿Qué necesidades satisface?</span> Abastecer de combustibles y servicios complementarios de manera segura.</li>
+              <li><span className="font-semibold">¿A quiénes satisface la necesidad?</span> A las unidades mineras y clientes de la región de Puno.</li>
+              <li><span className="font-semibold">¿Cómo satisface esas necesidades?</span> Promoviendo el desarrollo sostenible, la formalización del sector y el bienestar de nuestras cooperativas mineras asociadas.</li>
+            </ul>
+          </div>
+          {/* Visión */}
+          <div className="bg-white rounded-xl shadow-lg p-8 border-t-4 border-yellow-500">
+            <h3 className="text-2xl font-bold text-yellow-600 mb-4">Visión</h3>
+            <p className="text-gray-700 mb-4">
+              "Ser la estación de servicio líder en el sur del Perú vinculada al sector minero, reconocida por su eficiencia operativa, innovación tecnológica, responsabilidad ambiental y compromiso social, consolidando un modelo empresarial cooperativo que inspire progreso y confianza."
+            </p>
+            <ul className="list-disc pl-5 text-gray-600 space-y-2">
+              <li><span className="font-semibold">Inspiradora:</span> Expresa un propósito trascendente: ser líder en el sur del Perú, no solo en términos de negocio, sino también como referente en responsabilidad social, ambiental e innovación tecnológica.</li>
+              <li><span className="font-semibold">Clara y concisa:</span> Es clara en cuanto a su sector de acción (servicio de combustibles y minería) y su ámbito geográfico (sur del Perú). Enumera sus pilares estratégicos: eficiencia, innovación, sostenibilidad y compromiso social, integrando además su identidad como modelo cooperativo.</li>
+              <li><span className="font-semibold">Ambiciosa pero realista:</span> Plantea una meta ambiciosa pero alcanzable: liderazgo regional, eficiencia, innovación y sostenibilidad dentro del sector minero-energético. Estos objetivos son factibles considerando que CECOMSAP ya cuenta con una base operativa sólida, una red cooperativa establecida y un enfoque organizacional enfocado en la mejora continua.</li>
+              <li><span className="font-semibold">Relevante y adaptativa:</span> Su modelo cooperativo responde a una necesidad de equidad, inclusión y desarrollo sostenible en regiones como Puno. Esto la convierte en una visión alineada a las tendencias modernas y adaptable a los cambios sociales, normativos y tecnológicos del sector energético y minero.</li>
+            </ul>
+          </div>
+        </div>
+
         <div>
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Nuestros Valores</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
